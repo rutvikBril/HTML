@@ -9,21 +9,33 @@
   </head>
   <body>
     <form class="form">
-      <label class="head"><b>Add Record</b></label
-      ><br />
-      <label class="label" for="loc_name">Location name</label><br />
-      <input
-        class="input_text"
-        type="text"
-        id="loc_name"
-        name="location"
-      /><br />
-      <label class="label" for="loc_dec">Location Description</label><br />
-      <textarea class="input_text" rows="5"></textarea><br />
-      <label class="label">Status:</label><br />
-      <input class="radio_button" type="radio" name="action" value="Active" />
-      Active
-      <input type="radio" name="action" value="InActive" /> Inactive<br />
+      <label class="head"><b>Add Record</b></label>
+      <div>
+        <label class="label" for="loc_name">Location name</label>
+        <input class="input_text" type="text" id="loc_name" name="location" />
+      </div>
+
+      <div>
+        <label class="label" for="loc_dec">Location Description</label>
+        <textarea class="input_text" rows="5"></textarea>
+      </div>
+      <div>
+        <label for="action" class="label">Status:</label>
+        <div>
+          <input
+            class="radio_button"
+            type="radio"
+            name="action"
+            value="Active"
+          />Active
+          <input
+            class="radio_button"
+            type="radio"
+            name="action"
+            value="active"
+          />Inactive
+        </div>
+      </div>
       <input class="button" type="submit" name="add" value="add" />
     </form>
   </body>
