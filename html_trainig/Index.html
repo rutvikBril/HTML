@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <label class="head">Add Record</label>
-    <form>
-      <label for="loc_name">Location name</label><br />
-      <input type="text" id="loc_name" name="location" /><br />
-      <label for="loc_dec">Location Description</label><br />
-      <textarea class="loc_dec" rows="5"></textarea><br />
-      <label>Status:</label><br />
-      <input type="radio" name="action" value="Active" /> Active
+    <form class="form">
+      <label class="head"><b>Add Record</b></label
+      ><br />
+      <label class="label" for="loc_name">Location name</label><br />
+      <input
+        class="input_text"
+        type="text"
+        id="loc_name"
+        name="location"
+      /><br />
+      <label class="label" for="loc_dec">Location Description</label><br />
+      <textarea class="input_text" rows="5"></textarea><br />
+      <label class="label">Status:</label><br />
+      <input class="radio_button" type="radio" name="action" value="Active" />
+      Active
       <input type="radio" name="action" value="InActive" /> Inactive<br />
-      <input type="submit" name="add" value="add" />
+      <input class="button" type="submit" name="add" value="add" />
     </form>
   </body>
 </html>
