@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/locationform.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <button id="add-button" class="btn">Add</button>
+    <div id="add-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form" id="myForm">
+          <div class="close_button" id="close-btn">x</div>
+          <label class="head"><b>Add Record</b></label>
+          <div>
+            <label class="label" for="loc_name" name="Location-Name"
+              >Location name</label
+            >
+            <input
+              class="input_text"
+              type="text"
+              id="loc_name"
+              name="location"
+            />
+          </div>
+          <div>
+            <label class="label" for="loc_add">Location Description</label>
+            <textarea
+              class="input_text"
+              id="loc_add"
+              rows="5"
+              name="Location_Address"
+            ></textarea>
+          </div>
+          <div>
+            <label for="action" class="label">Status:</label>
+            <div>
+              <input
+                id="active"
+                class="radio_button"
+                type="radio"
+                name="action"
+                value="Active"
+              />Active
+              <input
+                id="inactive"
+                class="radio_button"
+                type="radio"
+                name="action"
+                value="active"
+              />Inactive
+            </div>
+          </div>
+          <input id="submit-form" class="btn" type="submit" name="add" />
+        </form>
+      </div>
+    </div>
+    <!-- to view data -->
+    <div class="modal modal-content" id="popup">
+      <form class="form">
+        <div class="close_button" id="closePopupBtn"">
+          x
+        </div>
+        <label class="label" for="ID">ID</label>
+        <input type="number" class="text" id="ID_veiw_data" value="" disabled />
+
+        <label class="label" for="name">Location Name</label>
+        <input
+          type="text"
+          class="input_text"
+          id="name_veiw_data"
+          value=""
+          disabled
+        />
+
+        <label class="label" for="location_drcr">Location Description</label>
+        <textarea
+          type="text"
+          class="input_text"
+          id="location_drcr_veiw_data"
+          value=""
+          disabled
+        ></textarea>
+      </form>
+    </div>
+    <!-- for delete -->
+    <div
+      class="modal modal-content"
+      id="confirmationPopup"
+      style="display: none"
+    >
+      <p>Are you sure you want to delete?</p>
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+    <!-- for edit form  -->
+    <div id="editPopup" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form" id="editForm">
+          <div class="close_button" id="closeEditPopupBtn">x</div>
+          <div>
+            <label class="label" for="loc_name" name="Location-Name"
+              >Location name</label
+            >
+            <input
+              class="input_text"
+              type="text"
+              id="edit_name"
+              name="location"
+            />
+          </div>
+
+          <div>
+            <label class="label" for="loc_dec">Location Description</label>
+            <textarea
+              class="input_text"
+              id="edit_add"
+              rows="5"
+              name="Location_Address"
+            ></textarea>
+          </div>
+          <div>
+            <input
+              id="saveBtn"
+              class="btn"
+              type="submit"
+              name="save"
+              value="save"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="table_div">
+      <table>
+        <thead>
+          <tr>
+            <th>Location Name</th>
+            <th>Location Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="location_list">
+          <td>karnavati app</td>
+          <td>ahmedabad</td>
+          <td>
+            <button><i class="fa fa-eye" aria-hidden="true"></i></button>
+            <button><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

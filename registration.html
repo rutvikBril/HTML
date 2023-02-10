@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./styles/style2.css" />
+  </head>
+  <body class="body">
+    <div class="div">
+      <form class="form">
+        <label class="label">Registration Form</label>
+        <div>
+          <label class="label">First Name</label>
+          <input
+            class="text_input"
+            type="text"
+            name="First Name"
+            placeholder="First Name"
+          />
+        </div>
+        <div>
+          <label class="label">Last Name</label>
+          <input
+            class="text_input"
+            type="text"
+            name="Last Name"
+            placeholder="Last Name"
+          />
+        </div>
+        <div>
+          <label class="label">Phone</label>
+          <input class="text_input" id="phone" type="tel" name="Number" />
+        </div>
+
+        <div class="gender">
+          <label class="label" for="gender">gender</label>
+
+          <input
+            id="gender"
+            class="radio_button"
+            type="radio"
+            name="action"
+            value="gender"
+          />Male
+          <input
+            class="radio_button"
+            type="radio"
+            name="action"
+            value="gender"
+          />Female
+        </div>
+        <div>
+          <label class="label">Address</label>
+          <textarea id="textarea" class="text_input" name="Address"></textarea>
+        </div>
+        <div class="btn_container">
+          <input class="button" type="submit" name="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
